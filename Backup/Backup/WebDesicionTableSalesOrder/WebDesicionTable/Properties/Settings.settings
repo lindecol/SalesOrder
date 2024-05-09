@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebDesicionTable.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WebDesicionTable_ServicioAutenticacion_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.104.0.82/wspraxair/Service.asmx</Value>
+    </Setting>
+    <Setting Name="Ingreso" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">74,/=!!8(LR6(O(!Q2QZ0JDDJV!Q2QI(AZ!D!07!JJJJD!Q2QI(AZ!==%=</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

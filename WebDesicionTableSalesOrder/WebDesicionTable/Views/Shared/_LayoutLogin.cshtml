@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Web DesicionTable Sales Order</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.7.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Principal.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div id="title">
+                <div id="cb1">
+                     <img src="@Url.Content("~/Content/themes/base/images/logo_praxair.gif")" alt="" />
+                </div>
+                <div id="cb2">
+                    <img src="@Url.Content("~/Content/themes/base/images/header_bg.jpg")" alt="" />
+                </div>
+            </div>
+            <br class="clear" />
+        </header>
+        <section id="mainLogo">
+            @RenderBody()
+        </section>
+
+        <section id="footer">
+          Versión 1.0
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AgenciasUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_Usrid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_Grupo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_empid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgenciasUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AgenciasUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmpresasUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_Usrid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_Grupo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmpresasUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmpresasUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GruposUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_Usrid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GruposUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GruposUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DivisionesUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_Usrid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_Grupo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_Empid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DivisionesUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DivisionesUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModulosUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_Usrid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_Padre" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModulosUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModulosUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaseEmpresa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_Grupo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_Empresa" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaseEmpresaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BaseEmpresaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="datosUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_Usrnmb" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_TipoRetorno" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="datosUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="datosUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="usuarioFuncion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_usrid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Funcion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="usuarioFuncionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioFuncionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="usuarioValido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_Usrnmb" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="usuarioValidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioValidoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaestraCorreos">
+        <s:complexType />
+      </s:element>
+      <s:element name="MaestraCorreosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaestraCorreosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaestraCorreosGeneral">
+        <s:complexType />
+      </s:element>
+      <s:element name="MaestraCorreosGeneralResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaestraCorreosGeneralResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParametrosEncCorreos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_NombreServicio" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_IdCorreo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParametrosEncCorreosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParametrosEncCorreosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParametrosDetCorreos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_NombreServicio" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_IdCorreo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Parametro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParametrosDetCorreosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParametrosDetCorreosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="valorParametrosDetCorreos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_NombreServicio" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_IdCorreo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Parametro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="valorParametrosDetCorreosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="valorParametrosDetCorreosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DatosCorreo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_NombreServicio" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_IdCorreo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DatosCorreoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DatosCorreoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ejecutaProcedimiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_NombreServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Procedimiento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ejecutaProcedimientoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Encriptar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_Cadena" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_Opc" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncriptarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncriptarResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DesEncriptar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_Cadena" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_Opc" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DesEncriptarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DesEncriptarResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="descripcionGrupo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pGrupo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="descripcionGrupoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="descripcionGrupoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="descripcionEmpresa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pEmpid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pGrupo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="descripcionEmpresaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="descripcionEmpresaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="descripcionAgencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pEmpid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pGrupo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAgencia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="descripcionAgenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="descripcionAgenciaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OlvidoContrasena">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsrmb" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OlvidoContrasenaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CambioContrasena">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pUsrid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pContrasena" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambioContrasenaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertarMaestraCorreos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_IdCorreo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDescCorreo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrigenDatos" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pGrupo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pEmpid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pPeriodo" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarMaestraCorreosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ModificarMaestraCorreos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_IdCorreo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDescCorreo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrigenDatos" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pGrupo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pEmpid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pPeriodo" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="pActivo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarMaestraCorreosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EliminarMaestraCorreos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_IdCorreo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarMaestraCorreosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EliminarDetalleCorreos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_IdCorreo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIdParametro" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarDetalleCorreosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertarDetalleCorreo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pIdCorreo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pGrupo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pEmpid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIdParametro" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIdDetalle" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNmbDetalle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCampo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarDetalleCorreoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="valorCache">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_Pais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Comp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Valor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="valorCacheResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="valorCacheResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Pais">
+        <s:complexType />
+      </s:element>
+      <s:element name="PaisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaisResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AgenciasUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:AgenciasUsuario" />
+  </wsdl:message>
+  <wsdl:message name="AgenciasUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:AgenciasUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmpresasUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:EmpresasUsuario" />
+  </wsdl:message>
+  <wsdl:message name="EmpresasUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:EmpresasUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="GruposUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:GruposUsuario" />
+  </wsdl:message>
+  <wsdl:message name="GruposUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:GruposUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="DivisionesUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:DivisionesUsuario" />
+  </wsdl:message>
+  <wsdl:message name="DivisionesUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:DivisionesUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModulosUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ModulosUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ModulosUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ModulosUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="BaseEmpresaSoapIn">
+    <wsdl:part name="parameters" element="tns:BaseEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="BaseEmpresaSoapOut">
+    <wsdl:part name="parameters" element="tns:BaseEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="datosUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:datosUsuario" />
+  </wsdl:message>
+  <wsdl:message name="datosUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:datosUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="usuarioFuncionSoapIn">
+    <wsdl:part name="parameters" element="tns:usuarioFuncion" />
+  </wsdl:message>
+  <wsdl:message name="usuarioFuncionSoapOut">
+    <wsdl:part name="parameters" element="tns:usuarioFuncionResponse" />
+  </wsdl:message>
+  <wsdl:message name="usuarioValidoSoapIn">
+    <wsdl:part name="parameters" element="tns:usuarioValido" />
+  </wsdl:message>
+  <wsdl:message name="usuarioValidoSoapOut">
+    <wsdl:part name="parameters" element="tns:usuarioValidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaestraCorreosSoapIn">
+    <wsdl:part name="parameters" element="tns:MaestraCorreos" />
+  </wsdl:message>
+  <wsdl:message name="MaestraCorreosSoapOut">
+    <wsdl:part name="parameters" element="tns:MaestraCorreosResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaestraCorreosGeneralSoapIn">
+    <wsdl:part name="parameters" element="tns:MaestraCorreosGeneral" />
+  </wsdl:message>
+  <wsdl:message name="MaestraCorreosGeneralSoapOut">
+    <wsdl:part name="parameters" element="tns:MaestraCorreosGeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParametrosEncCorreosSoapIn">
+    <wsdl:part name="parameters" element="tns:ParametrosEncCorreos" />
+  </wsdl:message>
+  <wsdl:message name="ParametrosEncCorreosSoapOut">
+    <wsdl:part name="parameters" element="tns:ParametrosEncCorreosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParametrosDetCorreosSoapIn">
+    <wsdl:part name="parameters" element="tns:ParametrosDetCorreos" />
+  </wsdl:message>
+  <wsdl:message name="ParametrosDetCorreosSoapOut">
+    <wsdl:part name="parameters" element="tns:ParametrosDetCorreosResponse" />
+  </wsdl:message>
+  <wsdl:message name="valorParametrosDetCorreosSoapIn">
+    <wsdl:part name="parameters" element="tns:valorParametrosDetCorreos" />
+  </wsdl:message>
+  <wsdl:message name="valorParametrosDetCorreosSoapOut">
+    <wsdl:part name="parameters" element="tns:valorParametrosDetCorreosResponse" />
+  </wsdl:message>
+  <wsdl:message name="DatosCorreoSoapIn">
+    <wsdl:part name="parameters" element="tns:DatosCorreo" />
+  </wsdl:message>
+  <wsdl:message name="DatosCorreoSoapOut">
+    <wsdl:part name="parameters" element="tns:DatosCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ejecutaProcedimientoSoapIn">
+    <wsdl:part name="parameters" element="tns:ejecutaProcedimiento" />
+  </wsdl:message>
+  <wsdl:message name="ejecutaProcedimientoSoapOut">
+    <wsdl:part name="parameters" element="tns:ejecutaProcedimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncriptarSoapIn">
+    <wsdl:part name="parameters" element="tns:Encriptar" />
+  </wsdl:message>
+  <wsdl:message name="EncriptarSoapOut">
+    <wsdl:part name="parameters" element="tns:EncriptarResponse" />
+  </wsdl:message>
+  <wsdl:message name="DesEncriptarSoapIn">
+    <wsdl:part name="parameters" element="tns:DesEncriptar" />
+  </wsdl:message>
+  <wsdl:message name="DesEncriptarSoapOut">
+    <wsdl:part name="parameters" element="tns:DesEncriptarResponse" />
+  </wsdl:message>
+  <wsdl:message name="descripcionGrupoSoapIn">
+    <wsdl:part name="parameters" element="tns:descripcionGrupo" />
+  </wsdl:message>
+  <wsdl:message name="descripcionGrupoSoapOut">
+    <wsdl:part name="parameters" element="tns:descripcionGrupoResponse" />
+  </wsdl:message>
+  <wsdl:message name="descripcionEmpresaSoapIn">
+    <wsdl:part name="parameters" element="tns:descripcionEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="descripcionEmpresaSoapOut">
+    <wsdl:part name="parameters" element="tns:descripcionEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="descripcionAgenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:descripcionAgencia" />
+  </wsdl:message>
+  <wsdl:message name="descripcionAgenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:descripcionAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="OlvidoContrasenaSoapIn">
+    <wsdl:part name="parameters" element="tns:OlvidoContrasena" />
+  </wsdl:message>
+  <wsdl:message name="OlvidoContrasenaSoapOut">
+    <wsdl:part name="parameters" element="tns:OlvidoContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CambioContrasenaSoapIn">
+    <wsdl:part name="parameters" element="tns:CambioContrasena" />
+  </wsdl:message>
+  <wsdl:message name="CambioContrasenaSoapOut">
+    <wsdl:part name="parameters" element="tns:CambioContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarMaestraCorreosSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarMaestraCorreos" />
+  </wsdl:message>
+  <wsdl:message name="InsertarMaestraCorreosSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarMaestraCorreosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarMaestraCorreosSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarMaestraCorreos" />
+  </wsdl:message>
+  <wsdl:message name="ModificarMaestraCorreosSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarMaestraCorreosResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarMaestraCorreosSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarMaestraCorreos" />
+  </wsdl:message>
+  <wsdl:message name="EliminarMaestraCorreosSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarMaestraCorreosResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarDetalleCorreosSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarDetalleCorreos" />
+  </wsdl:message>
+  <wsdl:message name="EliminarDetalleCorreosSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarDetalleCorreosResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarDetalleCorreoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarDetalleCorreo" />
+  </wsdl:message>
+  <wsdl:message name="InsertarDetalleCorreoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarDetalleCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="valorCacheSoapIn">
+    <wsdl:part name="parameters" element="tns:valorCache" />
+  </wsdl:message>
+  <wsdl:message name="valorCacheSoapOut">
+    <wsdl:part name="parameters" element="tns:valorCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="PaisSoapIn">
+    <wsdl:part name="parameters" element="tns:Pais" />
+  </wsdl:message>
+  <wsdl:message name="PaisSoapOut">
+    <wsdl:part name="parameters" element="tns:PaisResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="AgenciasUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que retorna las agencias del usuario</wsdl:documentation>
+      <wsdl:input message="tns:AgenciasUsuarioSoapIn" />
+      <wsdl:output message="tns:AgenciasUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmpresasUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que retorna las Empresas del usuario</wsdl:documentation>
+      <wsdl:input message="tns:EmpresasUsuarioSoapIn" />
+      <wsdl:output message="tns:EmpresasUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GruposUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que retorna los Grupos del usuario</wsdl:documentation>
+      <wsdl:input message="tns:GruposUsuarioSoapIn" />
+      <wsdl:output message="tns:GruposUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DivisionesUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que retorna los Divisiones del usuario</wsdl:documentation>
+      <wsdl:input message="tns:DivisionesUsuarioSoapIn" />
+      <wsdl:output message="tns:DivisionesUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModulosUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que retorna los modulos del usuario</wsdl:documentation>
+      <wsdl:input message="tns:ModulosUsuarioSoapIn" />
+      <wsdl:output message="tns:ModulosUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BaseEmpresa">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Conexion por defecto</wsdl:documentation>
+      <wsdl:input message="tns:BaseEmpresaSoapIn" />
+      <wsdl:output message="tns:BaseEmpresaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="datosUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datos del usuario</wsdl:documentation>
+      <wsdl:input message="tns:datosUsuarioSoapIn" />
+      <wsdl:output message="tns:datosUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="usuarioFuncion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funcion valida para el usuario</wsdl:documentation>
+      <wsdl:input message="tns:usuarioFuncionSoapIn" />
+      <wsdl:output message="tns:usuarioFuncionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="usuarioValido">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funcion valida el usuario</wsdl:documentation>
+      <wsdl:input message="tns:usuarioValidoSoapIn" />
+      <wsdl:output message="tns:usuarioValidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaestraCorreos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Maestra correos</wsdl:documentation>
+      <wsdl:input message="tns:MaestraCorreosSoapIn" />
+      <wsdl:output message="tns:MaestraCorreosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaestraCorreosGeneral">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Maestra correos General</wsdl:documentation>
+      <wsdl:input message="tns:MaestraCorreosGeneralSoapIn" />
+      <wsdl:output message="tns:MaestraCorreosGeneralSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParametrosEncCorreos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Parametros correos</wsdl:documentation>
+      <wsdl:input message="tns:ParametrosEncCorreosSoapIn" />
+      <wsdl:output message="tns:ParametrosEncCorreosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParametrosDetCorreos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Parametros Detalle correos</wsdl:documentation>
+      <wsdl:input message="tns:ParametrosDetCorreosSoapIn" />
+      <wsdl:output message="tns:ParametrosDetCorreosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="valorParametrosDetCorreos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valor Parametros Detalle correos</wsdl:documentation>
+      <wsdl:input message="tns:valorParametrosDetCorreosSoapIn" />
+      <wsdl:output message="tns:valorParametrosDetCorreosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DatosCorreo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datos correos</wsdl:documentation>
+      <wsdl:input message="tns:DatosCorreoSoapIn" />
+      <wsdl:output message="tns:DatosCorreoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ejecutaProcedimiento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Ejecuta procedimiento</wsdl:documentation>
+      <wsdl:input message="tns:ejecutaProcedimientoSoapIn" />
+      <wsdl:output message="tns:ejecutaProcedimientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encriptar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Encripta</wsdl:documentation>
+      <wsdl:input message="tns:EncriptarSoapIn" />
+      <wsdl:output message="tns:EncriptarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DesEncriptar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">DesEncripta</wsdl:documentation>
+      <wsdl:input message="tns:DesEncriptarSoapIn" />
+      <wsdl:output message="tns:DesEncriptarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="descripcionGrupo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Descripción Grupo</wsdl:documentation>
+      <wsdl:input message="tns:descripcionGrupoSoapIn" />
+      <wsdl:output message="tns:descripcionGrupoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="descripcionEmpresa">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Descripción Empresa</wsdl:documentation>
+      <wsdl:input message="tns:descripcionEmpresaSoapIn" />
+      <wsdl:output message="tns:descripcionEmpresaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="descripcionAgencia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Descripción Agencia</wsdl:documentation>
+      <wsdl:input message="tns:descripcionAgenciaSoapIn" />
+      <wsdl:output message="tns:descripcionAgenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OlvidoContrasena">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">OlvidoContraseña</wsdl:documentation>
+      <wsdl:input message="tns:OlvidoContrasenaSoapIn" />
+      <wsdl:output message="tns:OlvidoContrasenaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CambioContrasena">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CammbioContraseña</wsdl:documentation>
+      <wsdl:input message="tns:CambioContrasenaSoapIn" />
+      <wsdl:output message="tns:CambioContrasenaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarMaestraCorreos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insertar Maestra Correos</wsdl:documentation>
+      <wsdl:input message="tns:InsertarMaestraCorreosSoapIn" />
+      <wsdl:output message="tns:InsertarMaestraCorreosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarMaestraCorreos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Modificar Maestra Correos</wsdl:documentation>
+      <wsdl:input message="tns:ModificarMaestraCorreosSoapIn" />
+      <wsdl:output message="tns:ModificarMaestraCorreosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarMaestraCorreos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Eliminar Maestra Correos</wsdl:documentation>
+      <wsdl:input message="tns:EliminarMaestraCorreosSoapIn" />
+      <wsdl:output message="tns:EliminarMaestraCorreosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDetalleCorreos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Eliminar Detalle Correos</wsdl:documentation>
+      <wsdl:input message="tns:EliminarDetalleCorreosSoapIn" />
+      <wsdl:output message="tns:EliminarDetalleCorreosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarDetalleCorreo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insertar Detalle Correo</wsdl:documentation>
+      <wsdl:input message="tns:InsertarDetalleCorreoSoapIn" />
+      <wsdl:output message="tns:InsertarDetalleCorreoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="valorCache">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valor del cache</wsdl:documentation>
+      <wsdl:input message="tns:valorCacheSoapIn" />
+      <wsdl:output message="tns:valorCacheSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Pais">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna el PAIS</wsdl:documentation>
+      <wsdl:input message="tns:PaisSoapIn" />
+      <wsdl:output message="tns:PaisSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AgenciasUsuario">
+      <soap:operation soapAction="http://tempuri.org/AgenciasUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpresasUsuario">
+      <soap:operation soapAction="http://tempuri.org/EmpresasUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GruposUsuario">
+      <soap:operation soapAction="http://tempuri.org/GruposUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DivisionesUsuario">
+      <soap:operation soapAction="http://tempuri.org/DivisionesUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModulosUsuario">
+      <soap:operation soapAction="http://tempuri.org/ModulosUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaseEmpresa">
+      <soap:operation soapAction="http://tempuri.org/BaseEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="datosUsuario">
+      <soap:operation soapAction="http://tempuri.org/datosUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usuarioFuncion">
+      <soap:operation soapAction="http://tempuri.org/usuarioFuncion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usuarioValido">
+      <soap:operation soapAction="http://tempuri.org/usuarioValido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaestraCorreos">
+      <soap:operation soapAction="http://tempuri.org/MaestraCorreos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaestraCorreosGeneral">
+      <soap:operation soapAction="http://tempuri.org/MaestraCorreosGeneral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParametrosEncCorreos">
+      <soap:operation soapAction="http://tempuri.org/ParametrosEncCorreos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParametrosDetCorreos">
+      <soap:operation soapAction="http://tempuri.org/ParametrosDetCorreos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valorParametrosDetCorreos">
+      <soap:operation soapAction="http://tempuri.org/valorParametrosDetCorreos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosCorreo">
+      <soap:operation soapAction="http://tempuri.org/DatosCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ejecutaProcedimiento">
+      <soap:operation soapAction="http://tempuri.org/ejecutaProcedimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encriptar">
+      <soap:operation soapAction="http://tempuri.org/Encriptar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesEncriptar">
+      <soap:operation soapAction="http://tempuri.org/DesEncriptar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="descripcionGrupo">
+      <soap:operation soapAction="http://tempuri.org/descripcionGrupo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="descripcionEmpresa">
+      <soap:operation soapAction="http://tempuri.org/descripcionEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="descripcionAgencia">
+      <soap:operation soapAction="http://tempuri.org/descripcionAgencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OlvidoContrasena">
+      <soap:operation soapAction="http://tempuri.org/OlvidoContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambioContrasena">
+      <soap:operation soapAction="http://tempuri.org/CambioContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarMaestraCorreos">
+      <soap:operation soapAction="http://tempuri.org/InsertarMaestraCorreos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarMaestraCorreos">
+      <soap:operation soapAction="http://tempuri.org/ModificarMaestraCorreos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarMaestraCorreos">
+      <soap:operation soapAction="http://tempuri.org/EliminarMaestraCorreos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDetalleCorreos">
+      <soap:operation soapAction="http://tempuri.org/EliminarDetalleCorreos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarDetalleCorreo">
+      <soap:operation soapAction="http://tempuri.org/InsertarDetalleCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valorCache">
+      <soap:operation soapAction="http://tempuri.org/valorCache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pais">
+      <soap:operation soapAction="http://tempuri.org/Pais" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AgenciasUsuario">
+      <soap12:operation soapAction="http://tempuri.org/AgenciasUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpresasUsuario">
+      <soap12:operation soapAction="http://tempuri.org/EmpresasUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GruposUsuario">
+      <soap12:operation soapAction="http://tempuri.org/GruposUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DivisionesUsuario">
+      <soap12:operation soapAction="http://tempuri.org/DivisionesUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModulosUsuario">
+      <soap12:operation soapAction="http://tempuri.org/ModulosUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaseEmpresa">
+      <soap12:operation soapAction="http://tempuri.org/BaseEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="datosUsuario">
+      <soap12:operation soapAction="http://tempuri.org/datosUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usuarioFuncion">
+      <soap12:operation soapAction="http://tempuri.org/usuarioFuncion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usuarioValido">
+      <soap12:operation soapAction="http://tempuri.org/usuarioValido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaestraCorreos">
+      <soap12:operation soapAction="http://tempuri.org/MaestraCorreos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaestraCorreosGeneral">
+      <soap12:operation soapAction="http://tempuri.org/MaestraCorreosGeneral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParametrosEncCorreos">
+      <soap12:operation soapAction="http://tempuri.org/ParametrosEncCorreos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParametrosDetCorreos">
+      <soap12:operation soapAction="http://tempuri.org/ParametrosDetCorreos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valorParametrosDetCorreos">
+      <soap12:operation soapAction="http://tempuri.org/valorParametrosDetCorreos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosCorreo">
+      <soap12:operation soapAction="http://tempuri.org/DatosCorreo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ejecutaProcedimiento">
+      <soap12:operation soapAction="http://tempuri.org/ejecutaProcedimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encriptar">
+      <soap12:operation soapAction="http://tempuri.org/Encriptar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesEncriptar">
+      <soap12:operation soapAction="http://tempuri.org/DesEncriptar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="descripcionGrupo">
+      <soap12:operation soapAction="http://tempuri.org/descripcionGrupo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="descripcionEmpresa">
+      <soap12:operation soapAction="http://tempuri.org/descripcionEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="descripcionAgencia">
+      <soap12:operation soapAction="http://tempuri.org/descripcionAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OlvidoContrasena">
+      <soap12:operation soapAction="http://tempuri.org/OlvidoContrasena" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambioContrasena">
+      <soap12:operation soapAction="http://tempuri.org/CambioContrasena" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarMaestraCorreos">
+      <soap12:operation soapAction="http://tempuri.org/InsertarMaestraCorreos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarMaestraCorreos">
+      <soap12:operation soapAction="http://tempuri.org/ModificarMaestraCorreos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarMaestraCorreos">
+      <soap12:operation soapAction="http://tempuri.org/EliminarMaestraCorreos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDetalleCorreos">
+      <soap12:operation soapAction="http://tempuri.org/EliminarDetalleCorreos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarDetalleCorreo">
+      <soap12:operation soapAction="http://tempuri.org/InsertarDetalleCorreo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valorCache">
+      <soap12:operation soapAction="http://tempuri.org/valorCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pais">
+      <soap12:operation soapAction="http://tempuri.org/Pais" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://10.104.0.82/wspraxair/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://10.104.0.82/wspraxair/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

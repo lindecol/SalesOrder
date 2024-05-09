@@ -1,0 +1,1 @@
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WCF_SalesOrder\obj\Debug\WCF_SalesOrder.csproj.CoreCompileInputs.cache

@@ -1,0 +1,15 @@
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\bin\WebDesicionTable.dll.config
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\bin\WebDesicionTable.dll
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\bin\WebDesicionTable.pdb
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\bin\System.Web.WebPages.Razor.dll
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\bin\System.Web.WebPages.dll
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\bin\System.Web.WebPages.Deployment.dll
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\bin\System.Web.Razor.dll
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\bin\System.Web.Helpers.dll
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\bin\System.Web.Mvc.dll
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\obj\Debug\WebDesicionTable.csproj.AssemblyReference.cache
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\obj\Debug\WebDesicionTable.csproj.CoreCompileInputs.cache
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\obj\Debug\WebDesicionTable.csproj.CopyComplete
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\obj\Debug\WebDesicionTable.dll
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WebDesicionTableSalesOrder\WebDesicionTable\obj\Debug\WebDesicionTable.pdb

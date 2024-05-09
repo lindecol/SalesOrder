@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SalesOrderModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="strConexion" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SPH_DECISION_TABLE" EntityType="SalesOrderModel.SPH_DECISION_TABLE" />
+  </EntityContainer>
+  <EntityType Name="SPH_DECISION_TABLE">
+    <Key>
+      <PropertyRef Name="ID_DESICION_TABLE" />
+    </Key>
+    <Property Type="Int16" Name="ID_COMPANY" Nullable="false" />
+    <Property Type="String" Name="APPLICATION" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CUSTOMER_TYPE" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TRANSACTION_TYPE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TYPE_APPROVAL" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TYPE_CREDIT_NOTE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BILL_REFER" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RELATED_REFERRALS" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PROFORMA_INVOICE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RESULT" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TRIGGER_TABLE" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ACTION" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ANULA" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ID_DESICION_TABLE" Nullable="false" />
+    <Property Type="String" Name="FINANCIAL_MEMO_NOTE" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

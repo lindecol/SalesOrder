@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.praxair.com.co/createsalesorder" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.praxair.com.co/createsalesorder" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SalesOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Header">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DCTO" type="xs:string" />
+              <xs:element name="MCU" type="xs:string" />
+              <xs:element name="AN8" type="xs:int" />
+              <xs:element name="SHAN" type="xs:int" />
+              <xs:element name="CRCD" type="xs:string" />
+              <xs:element name="TRDJ" type="xs:date" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Details" type="tns:Details" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Item">
+    <xs:sequence>
+      <xs:element name="ITM" type="xs:string" />
+      <xs:element name="LITM" type="xs:string" />
+      <xs:element name="UOM" type="xs:string" />
+      <xs:element name="SKTK" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Detail" type="tns:Detail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Detail">
+    <xs:sequence>
+      <xs:element name="MCU" type="xs:string" />
+      <xs:element name="SHAN" type="xs:int" />
+      <xs:element name="VR01" type="xs:string" />
+      <xs:element name="VR02" type="xs:string" />
+      <xs:element name="LOTN" type="xs:string" />
+      <xs:element name="EMCU" type="xs:string" />
+      <xs:element name="UORG" type="xs:decimal" />
+      <xs:element name="AEXP" type="xs:decimal" />
+      <xs:element name="URAT" type="xs:decimal" />
+      <xs:element name="Item" type="tns:Item" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SalesOrderModelStoreContainer" CdmEntityContainer="strConexion">
+    <EntitySetMapping Name="SPH_DECISION_TABLE">
+      <EntityTypeMapping TypeName="SalesOrderModel.SPH_DECISION_TABLE">
+        <MappingFragment StoreEntitySet="SPH_DECISION_TABLE">
+          <ScalarProperty Name="ID_COMPANY" ColumnName="ID_COMPANY" />
+          <ScalarProperty Name="FINANCIAL_MEMO_NOTE" ColumnName="FINANCIAL_MEMO_NOTE" />
+          <ScalarProperty Name="ID_DESICION_TABLE" ColumnName="ID_DESICION_TABLE" />
+          <ScalarProperty Name="ANULA" ColumnName="ANULA" />
+          <ScalarProperty Name="ACTION" ColumnName="ACTION" />
+          <ScalarProperty Name="TRIGGER_TABLE" ColumnName="TRIGGER_TABLE" />
+          <ScalarProperty Name="RESULT" ColumnName="RESULT" />
+          <ScalarProperty Name="PROFORMA_INVOICE" ColumnName="PROFORMA_INVOICE" />
+          <ScalarProperty Name="RELATED_REFERRALS" ColumnName="RELATED_REFERRALS" />
+          <ScalarProperty Name="BILL_REFER" ColumnName="BILL_REFER" />
+          <ScalarProperty Name="TYPE_CREDIT_NOTE" ColumnName="TYPE_CREDIT_NOTE" />
+          <ScalarProperty Name="TYPE_APPROVAL" ColumnName="TYPE_APPROVAL" />
+          <ScalarProperty Name="TRANSACTION_TYPE" ColumnName="TRANSACTION_TYPE" />
+          <ScalarProperty Name="CUSTOMER_TYPE" ColumnName="CUSTOMER_TYPE" />
+          <ScalarProperty Name="APPLICATION" ColumnName="APPLICATION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

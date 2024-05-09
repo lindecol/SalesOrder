@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="20f60882-050c-41d8-b79d-caa0497c2805" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:64046/WS_SalesOrder.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WS_SalesOrder.wsdl" MetadataType="Wsdl" ID="f6dda7d1-c1d6-44e7-b9dc-126eb8e39761" SourceId="1" SourceUrl="http://localhost:64046/WS_SalesOrder.svc?wsdl" />
+    <MetadataFile FileName="WS_SalesOrder.disco" MetadataType="Disco" ID="342c33f9-66bc-43c5-9bf2-73b877399734" SourceId="1" SourceUrl="http://localhost:64046/WS_SalesOrder.svc?disco" />
+    <MetadataFile FileName="WS_SalesOrder.xsd" MetadataType="Schema" ID="61d4b1f5-65db-4ba7-bb45-fc8a86fa48f3" SourceId="1" SourceUrl="http://localhost:64046/WS_SalesOrder.svc?xsd=xsd0" />
+    <MetadataFile FileName="WS_SalesOrder1.xsd" MetadataType="Schema" ID="4898529b-653e-4059-81f4-5f77f8a83130" SourceId="1" SourceUrl="http://localhost:64046/WS_SalesOrder.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

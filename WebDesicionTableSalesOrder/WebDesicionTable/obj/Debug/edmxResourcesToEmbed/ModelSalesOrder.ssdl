@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SalesOrderModel.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="10.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="SalesOrderModelStoreContainer">
+    <EntitySet Name="SPH_DECISION_TABLE" EntityType="SalesOrderModel.Store.SPH_DECISION_TABLE" store:Type="Tables" Schema="SISFACT" />
+  </EntityContainer>
+  <EntityType Name="SPH_DECISION_TABLE">
+    <Key>
+      <PropertyRef Name="ID_DESICION_TABLE" />
+    </Key>
+    <Property Name="ID_COMPANY" Type="number" Nullable="false" />
+    <Property Name="APPLICATION" Type="varchar2" Nullable="false" MaxLength="60" />
+    <Property Name="CUSTOMER_TYPE" Type="varchar2" Nullable="false" MaxLength="40" />
+    <Property Name="TRANSACTION_TYPE" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="TYPE_APPROVAL" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TYPE_CREDIT_NOTE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="BILL_REFER" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="RELATED_REFERRALS" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="PROFORMA_INVOICE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="RESULT" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TRIGGER_TABLE" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="ACTION" Type="varchar2" Nullable="false" MaxLength="7" />
+    <Property Name="ANULA" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="ID_DESICION_TABLE" Type="number" Nullable="false" />
+    <Property Name="FINANCIAL_MEMO_NOTE" Type="varchar2" MaxLength="1" />
+  </EntityType>
+</Schema>

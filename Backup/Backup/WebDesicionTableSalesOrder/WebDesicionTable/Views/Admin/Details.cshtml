@@ -1,0 +1,96 @@
+﻿@model WebDesicionTable.SPH_DECISION_TABLE
+@{
+    ViewBag.Title = "Details";
+}
+<h2>
+    Detalle registro</h2>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID_DESICION_TABLE }) |
+    @Html.ActionLink("Lista de datos", "Index")
+</p>
+<fieldset>
+    <div class="display-label">
+        Compañía</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_COMPANY)
+    </div>
+    <br class="clear" />
+    <div class="display-label">
+        Aplicación</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.APPLICATION)
+    </div>
+    <br class="clear" />
+    <div class="display-label">
+        Tipo de cliente</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CUSTOMER_TYPE)
+    </div>
+    <br class="clear" />
+    <div class="display-label">
+        Tipo de transacción</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TRANSACTION_TYPE)
+    </div>
+    <br class="clear" />
+    <div class="display-label">
+        Tipo autorización</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TYPE_APPROVAL)
+    </div>
+    <br class="clear" />
+    <div class="display-label">
+        Tipo nota crédito</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TYPE_CREDIT_NOTE)
+    </div>
+    <br class="clear" />
+    <div class="display-label">
+        Remito Factura</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BILL_REFER)
+    </div>
+    <br class="clear" />
+    <div class="display-label">
+        Asociada a remisión</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RELATED_REFERRALS)
+    </div>
+    <br class="clear" />
+    <div class="display-label">
+        Factura proforma</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PROFORMA_INVOICE)
+    </div>
+    <br class="clear" />
+    <div class="display-label">
+        Resultado</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RESULT)
+    </div>
+    <br class="clear" />
+    <div class="display-label">
+        Trigger</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TRIGGER_TABLE)
+    </div>
+    <br class="clear" />
+    <div class="display-label">
+        Acción</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ACTION)
+    </div>
+    <br class="clear" />
+    <div class="display-label">
+        Anula</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ANULA)
+    </div>
+    <br class="clear" />
+    <div class="display-label">
+        Nota financiera</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FINANCIAL_MEMO_NOTE)
+    </div>
+    <br class="clear" />
+</fieldset>

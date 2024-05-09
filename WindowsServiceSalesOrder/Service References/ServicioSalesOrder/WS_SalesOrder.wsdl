@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.praxair.com.co/SalesOrder" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WS_SalesOrder" targetNamespace="http://www.praxair.com.co/SalesOrder" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.praxair.com.co/SalesOrder/Imports">
+      <xsd:import schemaLocation="http://localhost:64046/WS_SalesOrder.svc?xsd=xsd0" namespace="http://www.praxair.com.co/SalesOrder" />
+      <xsd:import schemaLocation="http://localhost:64046/WS_SalesOrder.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWS_SalesOrder_GetSalesOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrder" />
+  </wsdl:message>
+  <wsdl:message name="IWS_SalesOrder_GetSalesOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWS_SalesOrder_Confirmation_InputMessage">
+    <wsdl:part name="parameters" element="tns:Confirmation" />
+  </wsdl:message>
+  <wsdl:message name="IWS_SalesOrder_Confirmation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWS_SalesOrder_Confirmation_InternalException_FaultMessage">
+    <wsdl:part name="detail" element="tns:InternalException" />
+  </wsdl:message>
+  <wsdl:portType name="IWS_SalesOrder">
+    <wsdl:operation name="GetSalesOrder">
+      <wsdl:input wsaw:Action="http://www.praxair.com.co/SalesOrder/IWS_SalesOrder/GetSalesOrder" message="tns:IWS_SalesOrder_GetSalesOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.praxair.com.co/SalesOrder/IWS_SalesOrder/GetSalesOrderResponse" message="tns:IWS_SalesOrder_GetSalesOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Confirmation">
+      <wsdl:input wsaw:Action="http://www.praxair.com.co/SalesOrder/IWS_SalesOrder/Confirmation" message="tns:IWS_SalesOrder_Confirmation_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.praxair.com.co/SalesOrder/IWS_SalesOrder/ConfirmationResponse" message="tns:IWS_SalesOrder_Confirmation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.praxair.com.co/SalesOrder/IWS_SalesOrder/ConfirmationInternalException" name="InternalException" message="tns:IWS_SalesOrder_Confirmation_InternalException_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWS_SalesOrder" type="tns:IWS_SalesOrder">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSalesOrder">
+      <soap:operation soapAction="http://www.praxair.com.co/SalesOrder/IWS_SalesOrder/GetSalesOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Confirmation">
+      <soap:operation soapAction="http://www.praxair.com.co/SalesOrder/IWS_SalesOrder/Confirmation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="InternalException">
+        <soap:fault use="literal" name="InternalException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_SalesOrder">
+    <wsdl:port name="BasicHttpBinding_IWS_SalesOrder" binding="tns:BasicHttpBinding_IWS_SalesOrder">
+      <soap:address location="http://localhost:64046/WS_SalesOrder.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

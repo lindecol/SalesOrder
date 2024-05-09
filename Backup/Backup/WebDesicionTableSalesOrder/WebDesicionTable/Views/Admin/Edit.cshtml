@@ -1,0 +1,135 @@
+﻿@model WebDesicionTable.SPH_DECISION_TABLE
+@{
+    ViewBag.Title = "Edit";
+}
+<h2>
+    Editar registro</h2>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<p>
+    @Html.ActionLink("Lista de datos", "Index")
+</p>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_COMPANY)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ID_COMPANY)
+            @Html.ValidationMessageFor(model => model.ID_COMPANY)
+        </div>
+        <br class="clear" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.APPLICATION)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.APPLICATION)
+            @Html.ValidationMessageFor(model => model.APPLICATION)
+        </div>
+        <br class="clear" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CUSTOMER_TYPE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CUSTOMER_TYPE)
+            @Html.ValidationMessageFor(model => model.CUSTOMER_TYPE)
+        </div>
+        <br class="clear" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TRANSACTION_TYPE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TRANSACTION_TYPE)
+            @Html.ValidationMessageFor(model => model.TRANSACTION_TYPE)
+        </div>
+        <br class="clear" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TYPE_APPROVAL)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TYPE_APPROVAL)
+            @Html.ValidationMessageFor(model => model.TYPE_APPROVAL)
+        </div>
+        <br class="clear" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TYPE_CREDIT_NOTE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TYPE_CREDIT_NOTE)
+            @Html.ValidationMessageFor(model => model.TYPE_CREDIT_NOTE)
+        </div>
+        <br class="clear" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BILL_REFER)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BILL_REFER)
+            @Html.ValidationMessageFor(model => model.BILL_REFER)
+        </div>
+        <br class="clear" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RELATED_REFERRALS)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RELATED_REFERRALS)
+            @Html.ValidationMessageFor(model => model.RELATED_REFERRALS)
+        </div>
+        <br class="clear" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PROFORMA_INVOICE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PROFORMA_INVOICE)
+            @Html.ValidationMessageFor(model => model.PROFORMA_INVOICE)
+        </div>
+        <br class="clear" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RESULT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RESULT)
+            @Html.ValidationMessageFor(model => model.RESULT)
+        </div>
+        <br class="clear" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TRIGGER_TABLE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TRIGGER_TABLE)
+            @Html.ValidationMessageFor(model => model.TRIGGER_TABLE)
+        </div>
+        <br class="clear" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ACTION)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ACTION)
+            @Html.ValidationMessageFor(model => model.ACTION)
+        </div>
+        <br class="clear" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ANULA)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ANULA)
+            @Html.ValidationMessageFor(model => model.ANULA)
+        </div>
+        <br class="clear" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FINANCIAL_MEMO_NOTE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FINANCIAL_MEMO_NOTE)
+            @Html.ValidationMessageFor(model => model.FINANCIAL_MEMO_NOTE)
+        </div>
+        <br class="clear" />
+        @Html.HiddenFor(model => model.ID_DESICION_TABLE)
+         <div class="editor-field">
+        </div>
+        <div class="editor-field">
+            <input class="btnGuardar" type="submit" value="Guardar" />
+        </div>
+    </fieldset>
+}

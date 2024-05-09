@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:cor="http://xmlns.oracle.com/CreateSalesOrderPraxReqABCSImpl/correlationset" xmlns:ns2="http://praxair.com/PraxairBusinessFault" xmlns:svcdoc="http://xmlns.oracle.com/Services/Documentation/V1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:praxabo="http://www.praxair.com.co/createsalesorder" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:praxabcs="http://xmlns.oracle.com/ABCSImpl/JDEE1/Core/CreateSalesOrderPraxReqABCSImpl/V1" xmlns:ns1="http://xmlns.oracle.com/Utilities/XREF" xmlns="http://schemas.xmlsoap.org/wsdl/" name="CreateSalesOrderPraxReqABCSImpl" targetNamespace="http://xmlns.oracle.com/ABCSImpl/JDEE1/Core/CreateSalesOrderPraxReqABCSImpl/V1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <documentation>
+    <svcdoc:Service>
+      <svcdoc:Description />
+      <svcdoc:ServiceType>RequesterABCSImpl</svcdoc:ServiceType>
+      <svcdoc:Version>1</svcdoc:Version>
+      <svcdoc:ProductCode>JDEE1</svcdoc:ProductCode>
+    </svcdoc:Service>
+    <abstractWSDL>http://usadanasfmwdev3.na.praxair.com:8001/soa-infra/services/SA_COLOMBIA/CreateSalesOrderPraxReqABCSImpl!1.0.2/CreateSalesOrderPraxReqABCSImpl.wsdl</abstractWSDL>
+  </documentation>
+  <plnk:partnerLinkType name="CreateSalesOrderPraxReqABCSImpl">
+    <plnk:role name="CreateSalesOrderPraxReqABCSImplProvider">
+      <plnk:portType name="praxabcs:CreateSalesOrderPraxReqABCSImpl" />
+    </plnk:role>
+  </plnk:partnerLinkType>
+  <wsdl:import namespace="http://praxair.com/PraxairBusinessFault" location="http://usadanasfmwdev3.na.praxair.com:8001/soa-infra/services/SA_COLOMBIA/CreateSalesOrderPraxReqABCSImpl/apps/COMMON/UtilityArtifacts/PraxairBusinessFault.wsdl" />
+  <wsdl:import namespace="http://schemas.oracle.com/bpel/extension" location="http://usadanasfmwdev3.na.praxair.com:8001/soa-infra/services/SA_COLOMBIA/CreateSalesOrderPraxReqABCSImpl/apps/AIAMetaData/AIAComponents/UtilityArtifacts/RuntimeFault.wsdl" />
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="http://usadanasfmwdev3.na.praxair.com:8001/soa-infra/services/SA_COLOMBIA/CreateSalesOrderPraxReqABCSImpl!1.0.2*soa_2fcad8e0-1bcc-4705-9927-9fa61f97e08d/CreateSalesOrderPraxReqABCSImpl?XSD=xsd/InfoSalesOrder.xsd" namespace="http://www.praxair.com.co/createsalesorder" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateSalesOrderReqMsg">
+    <wsdl:part name="CreateSalesOrder" element="praxabo:SalesOrder" />
+  </wsdl:message>
+  <wsdl:portType name="CreateSalesOrderPraxReqABCSImpl">
+    <wsdl:operation name="CreateSalesOrder">
+      <documentation>
+        <svcdoc:Operation>
+          <svcdoc:Description>This operation is used to Create an SalesOrder 
+                            object</svcdoc:Description>
+          <svcdoc:MEP>FireAndForget</svcdoc:MEP>
+        </svcdoc:Operation>
+      </documentation>
+      <wsdl:input message="praxabcs:CreateSalesOrderReqMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CreateSalesOrderPraxReqABCSImplBinding" type="praxabcs:CreateSalesOrderPraxReqABCSImpl">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateSalesOrder">
+      <soap:operation soapAction="CreateSalesOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CreateSalesOrderPraxReqABCSImpl">
+    <wsdl:port name="CreateSalesOrderPraxReqABCSImpl_pt" binding="praxabcs:CreateSalesOrderPraxReqABCSImplBinding">
+      <soap:address location="http://usadanasfmwdev3.na.praxair.com:8001/soa-infra/services/SA_COLOMBIA/CreateSalesOrderPraxReqABCSImpl!1.0.2*soa_2fcad8e0-1bcc-4705-9927-9fa61f97e08d/CreateSalesOrderPraxReqABCSImpl" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

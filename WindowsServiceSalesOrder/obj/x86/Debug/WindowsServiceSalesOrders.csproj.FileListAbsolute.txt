@@ -1,0 +1,6 @@
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WindowsServiceSalesOrder\obj\x86\Debug\WindowsServiceSalesOrder.Installer1.resources
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WindowsServiceSalesOrder\obj\x86\Debug\WindowsServiceSalesOrder.SalesOrder.resources
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WindowsServiceSalesOrder\obj\x86\Debug\WindowsServiceSalesOrders.csproj.GenerateResource.cache
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WindowsServiceSalesOrder\obj\x86\Debug\WindowsServiceSalesOrders.csproj.CoreCompileInputs.cache
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WindowsServiceSalesOrder\obj\x86\Debug\WindowsServiceSalesOrder.exe
+C:\Users\e0zo10\Documents\Nestor Rodriguez\Documentos\BACKUP TFS\Interface JDE - Prax2000\SalesOrder\WindowsServiceSalesOrder\obj\x86\Debug\WindowsServiceSalesOrder.pdb

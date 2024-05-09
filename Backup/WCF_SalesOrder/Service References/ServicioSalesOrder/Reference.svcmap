@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4c777bcb-dedc-4fb2-925a-ba9647757bb0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://usadanasfmwdev3.na.praxair.com:8001/soa-infra/services/SA_COLOMBIA/CreateSalesOrderPraxReqABCSImpl!1.0.2*soa_2fcad8e0-1bcc-4705-9927-9fa61f97e08d/CreateSalesOrderPraxReqABCSImpl?WSDL" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PraxairBusinessFault.wsdl" MetadataType="Wsdl" ID="a62527e5-f7f0-4e49-9d00-49a0192b2e3f" SourceId="1" SourceUrl="http://usadanasfmwdev3.na.praxair.com:8001/soa-infra/services/SA_COLOMBIA/CreateSalesOrderPraxReqABCSImpl/apps/COMMON/UtilityArtifacts/PraxairBusinessFault.wsdl" />
+    <MetadataFile FileName="InfoSalesOrder.xsd" MetadataType="Schema" ID="d3bc20f4-0fbf-4087-aa64-e5b0372dd882" SourceId="1" SourceUrl="http://usadanasfmwdev3.na.praxair.com:8001/soa-infra/services/SA_COLOMBIA/CreateSalesOrderPraxReqABCSImpl!1.0.2*soa_2fcad8e0-1bcc-4705-9927-9fa61f97e08d/CreateSalesOrderPraxReqABCSImpl?XSD=xsd/InfoSalesOrder.xsd" />
+    <MetadataFile FileName="CreateSalesOrderPraxReqABCSImpl.wsdl" MetadataType="Wsdl" ID="888768f9-0a31-40bd-b303-83bfc193d552" SourceId="1" SourceUrl="http://usadanasfmwdev3.na.praxair.com:8001/soa-infra/services/SA_COLOMBIA/CreateSalesOrderPraxReqABCSImpl!1.0.2*soa_2fcad8e0-1bcc-4705-9927-9fa61f97e08d/CreateSalesOrderPraxReqABCSImpl?WSDL" />
+    <MetadataFile FileName="RuntimeFault.wsdl" MetadataType="Wsdl" ID="fab15439-8cd6-4956-bfc1-3dc8cd0891ee" SourceId="1" SourceUrl="http://usadanasfmwdev3.na.praxair.com:8001/soa-infra/services/SA_COLOMBIA/CreateSalesOrderPraxReqABCSImpl/apps/AIAMetaData/AIAComponents/UtilityArtifacts/RuntimeFault.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

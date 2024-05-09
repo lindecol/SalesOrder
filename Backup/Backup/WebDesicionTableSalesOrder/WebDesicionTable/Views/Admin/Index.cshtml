@@ -1,0 +1,109 @@
+﻿@model IEnumerable<WebDesicionTable.SPH_DECISION_TABLE>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>
+    Listado de registros</h2>
+<p>
+    @Html.ActionLink("Nuevo registro", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Compañía
+        </th>
+        <th>
+            Aplicación
+        </th>
+        <th>
+            Tipo de Cliente
+        </th>
+        <th>
+            Tipo de transacción
+        </th>
+        <th>
+            Tipo de autorización
+        </th>
+        <th>
+            Tipo nota crédito
+        </th>
+        <th>
+            Remito factura
+        </th>
+        <th>
+            Asociada a remisión
+        </th>
+        <th>
+            Factura proforma
+        </th>
+        <th>
+            Resultado
+        </th>
+        <th>
+            Trigger
+        </th>
+        <th>
+            Acción
+        </th>
+        <th>
+            Anula
+        </th>
+        <th>
+            Nota financiera
+        </th>
+        <th>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_COMPANY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.APPLICATION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CUSTOMER_TYPE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TRANSACTION_TYPE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TYPE_APPROVAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TYPE_CREDIT_NOTE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BILL_REFER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RELATED_REFERRALS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PROFORMA_INVOICE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RESULT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TRIGGER_TABLE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ACTION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ANULA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FINANCIAL_MEMO_NOTE)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.ID_DESICION_TABLE })
+                @Html.ActionLink("Detalle", "Details", new { id = item.ID_DESICION_TABLE })
+                @Html.ActionLink("Borrar", "Delete", new { id = item.ID_DESICION_TABLE })
+            </td>
+        </tr>
+    }
+</table>

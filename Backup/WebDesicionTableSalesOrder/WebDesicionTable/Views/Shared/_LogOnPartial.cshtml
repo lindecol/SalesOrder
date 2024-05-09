@@ -1,0 +1,20 @@
+﻿<div>
+    <div style="width:2px;float:right;padding-right:4em;">
+        @if (Request.IsAuthenticated)
+        {
+            @Html.ActionLink("Salir", "LogOff", "Account")
+        }
+        else
+        {
+            @Html.ActionLink("Ingresar", "LogOn", "Account") 
+        }
+    </div>
+
+    <div style="width:2px;float:right;padding-right:2em">
+        <img width="15px" height="15px" src="@Url.Content("~/Content/themes/base/images/salir-icon.png")" alt="" />
+    </div>
+    <div class="display-clock-login">
+        @Html.Label(DateTime.Now.ToLongDateString().Substring(0, 1).ToUpper() + DateTime.Now.ToLongDateString().Substring(1))
+        <span id="jclock"></span>
+    </div>
+</div>
